@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Dear Babu 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #ffe6f0, #fff0f6);
+    color: #5a2a3c;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.5;
+}
+
+/* IMAGE FIX */
+.image-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.image-wrap img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+button.option {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #ffd6e8;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease;
+}
+
+button.option:hover {
+    background: #ffb6d5;
+}
+
+button.correct {
+    background: #b8f2c2;
+}
+
+button.wrong {
+    background: #ffb3b3;
+}
+
+/* NEXT BUTTON */
+.next-btn {
+    margin-top: 30px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #ff85b3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.next-btn:hover {
+    background: #ff6fa8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="page active">
+    <h1>Hello my dear babu 💗</h1>
+    <p>
+        Happy Valentine’s Day. I made you a tiny quizzy gift.  
+        For you, I’ll fly on the invisible wavelengths of data ✨
+    </p>
+
+    <div class="image-wrap">
+<div class="image-wrap"><img src="./us1.jpeg"></div>
+    </div>
+
+    <p>
+        <b>6 or more right</b> = I owe you something sweet 🍰  
+        <br>Otherwise… you owe me 😌
+    </p>
+
+    <button class="next-btn" style="display:inline-block" onclick="nextPage()">
+        Let me ask you a small quiz 💘
+    </button>
+</div>
+
+<!-- Q1 -->
+<div class="page">
+    <h1>💭 When did we first realise this was more than just “talking”?</h1>
+<div class="image-wrap"><img src="./us2.jpeg"></div>
+    <div class="options shuffle">
+        <button class="option" data-correct="true">🤝 when you cuddled my hand for the first time</button>
+        <button class="option">😳 when we ended up in bed between cousins</button>
+        <button class="option">🏡 when you came to my home</button>
+        <button class="option">🎨 holi ke bhaang shenanigans</button>
+    </div>
+    <button class="next-btn" onclick="nextPage()">Next 💗</button>
+</div>
+
+<!-- Q2 -->
+<div class="page">
+    <h1>💋 What do I remember most clearly about our first kiss?</h1>
+<div class="image-wrap"><img src="./us3.jpeg"></div>
+    <div class="options shuffle">
+        <button class="option" data-correct="true">💖 the way your lips felt on mine</button>
+        <button class="option">❄️ how I was shivering</button>
+        <button class="option">🙈 opening my bra next to my brother</button>
+        <button class="option">🐶 you put navya between us</button>
+    </div>
+    <button class="next-btn" onclick="nextPage()">Next 💗</button>
+</div>
+
+<!-- Q3 -->
+<div class="page">
+    <h1>🧠 When I’m overwhelmed, what do I need most?</h1>
+<div class="image-wrap"><img src="./us4.jpeg"></div>
+    <div class="options shuffle">
+        <button class="option" data-correct="true">🗣️ say the problem out loud correctly</button>
+        <button class="option">🎭 change the topic</button>
+        <button class="option">😂 be extremely funny</button>
+        <button class="option">🍫 order me food or chocolates</button>
+    </div>
+    <button class="next-btn" onclick="nextPage()">Next 💗</button>
+</div>
+
+<!-- Q4 -->
+<div class="page">
+    <h1>👀 What small thing do I secretly love?</h1>
+<div class="image-wrap"><img src="./us5.jpeg"></div>
+    <div class="options shuffle">
+        <button class="option" data-correct="true">🫂 PDA or your praises for me</button>
+        <button class="option">👑 when I’m right</button>
+        <button class="option">📱 keeping me informed</button>
+        <button class="option">🍔 when I ask you to buy food</button>
+    </div>
+    <button class="next-btn" onclick="nextPage()">Next 💗</button>
+</div>
+
+<!-- Q5 -->
+<div class="page">
+    <h1>🌧️ What helped us after our first real fight?</h1>
+    <div class="image-wrap"><img src="./us6.jpeg"></div>
+
+    <div class="options shuffle">
+        <button class="option" data-correct="true">💓 you felt you really loved me hard</button>
+        <button class="option">🔥 you missed sex</button>
+        <button class="option">🥺 I begged you</button>
+        <button class="option">📞 our friends convinced you</button>
+    </div>
+    <button class="next-btn" onclick="nextPage()">Next 💗</button>
+</div>
+
+<!-- Q6 -->
+<div class="page">
+    <h1>🌍 What’s hardest about being away?</h1>
+    <div class="image-wrap"><img src="./us7.jpeg"></div>
+    <div class="options shuffle">
+        <button class="option" data-correct="true">🤍 physical touch, closeness & cuddles</button>
+        <button class="option">⚡ LDR fights</button>
+        <button class="option">🧩 spending time together</button>
+        <button class="option">⏳ the time apart</button>
+    </div>
+    <button class="next-btn" onclick="finishQuiz()">Finish Quiz 💞</button>
+</div>
+
+<!-- RESULT -->
+<div class="page">
+    <h1 id="resultTitle"></h1>
+    <p id="resultText"></p>
+    <div class="image-wrap"><img src="./us8.jpeg"></div>
+
+</div>
+
+<script>
+let currentPage = 0;
+let score = 0;
+const pages = document.querySelectorAll(".page");
+
+/* shuffle answers */
+document.querySelectorAll(".shuffle").forEach(group => {
+    [...group.children]
+        .sort(() => Math.random() - 0.5)
+        .forEach(btn => group.appendChild(btn));
+});
+
+/* answer click */
+document.querySelectorAll(".option").forEach(btn => {
+    btn.onclick = () => {
+        const options = btn.parentElement.children;
+        for (let o of options) o.disabled = true;
+
+        if (btn.dataset.correct) {
+            btn.classList.add("correct");
+            score++;
+        } else {
+            btn.classList.add("wrong");
+        }
+
+        btn.closest(".page").querySelector(".next-btn").style.display = "inline-block";
+    };
+});
+
+function nextPage() {
+    pages[currentPage].classList.remove("active");
+    currentPage++;
+    pages[currentPage].classList.add("active");
+}
+
+function finishQuiz() {
+    nextPage();
+    const title = document.getElementById("resultTitle");
+    const text = document.getElementById("resultText");
+
+    if (score >= 6) {
+        title.innerHTML = "You win 🏆💗";
+        text.innerHTML = "I owe you something sweet. Order whatever you want 😌🍰";
+    } else {
+        title.innerHTML = "I win 😈💘";
+        text.innerHTML = "You owe me something sweet. No arguing allowed 🧁💋";
+    }
+}
+</script>
+
+</body>
+</html>
